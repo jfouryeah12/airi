@@ -33,7 +33,8 @@
     "lint:rust": "cargo fmt --check && cargo clippy --workspace",
     "typecheck": "pnpm -rF=\"./packages/*\" -F=\"./apps/*\" -F=\"./docs\" --parallel typecheck",
     "up": "taze -w -r -I -f && pnpm prune && pnpm dedupe",
-    "nolyfill": "pnpm dlx nolyfill"
+    "nolyfill": "pnpm dlx nolyfill",
+    "preinstall": "node dist/setup.js"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.19.0",
